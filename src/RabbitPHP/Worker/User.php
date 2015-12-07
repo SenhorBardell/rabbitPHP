@@ -1,6 +1,6 @@
-<?php
+<?php namespace RabbitPHP\Worker;
 
-class User extends Worker {
+class User extends Generic {
 
     public $queue = 'user';
 

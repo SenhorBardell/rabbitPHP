@@ -1,5 +1,11 @@
 {
-  "require": {
-    "videlalvaro/php-amqplib": "^2.5"
-	}
+    "name": "rabbitPHP",
+    "type": "library",
+    "description": "coming soon",
+    "require": {
+      "php": ">=5.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.1"
+    }
 }

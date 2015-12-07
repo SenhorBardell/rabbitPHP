@@ -1,4 +1,4 @@
-<?php
+<?php namespace Queue;
 
 class User extends Generic {
 

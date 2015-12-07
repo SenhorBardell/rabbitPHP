@@ -1,15 +1,11 @@
-<?php
-
+<?php namespace Queue;
 
 abstract class Generic {
 
-    /** @var Queue */
-    public $queue;
-
     public $name;
 
-    function __construct($queue) {
-        $this->queue = $queue;
+    function __construct(Adapter $adapter) {
+        $this->adapter = $adapter;
     }
 
     /**
@@ -19,7 +15,7 @@ abstract class Generic {
      * @param $params
      */
     protected function toQueue($job, $params) {
-        $this->queue->push($this->queue, [
+        $this->adapter->push($this->name, [
             'job' => $job,
             'params' => $params
         ]);
